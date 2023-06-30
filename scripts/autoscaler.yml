@@ -2,6 +2,14 @@ autoDiscovery:
   clusterName: <CLUSTER NAME>
 awsRegion: us-east-1
 
+extraArgs:
+  logtostderr: true
+  stderrthreshold: info
+  v: 4
+  scale-down-delay-after-add: 5m
+  scale-down-delay-after-delete: 0s
+  scale-down-delay-after-failure: 3m
+  scale-down-unneeded-time: 5m
 
 serviceMonitor:
   enabled: true
