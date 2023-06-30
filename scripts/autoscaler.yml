@@ -1,13 +1,21 @@
 autoDiscovery:
   clusterName: <CLUSTER NAME>
 awsRegion: us-east-1
-  
+
+extraArgs:
+  logtostderr: true
+  stderrthreshold: info
+  v: 4
+  scale-down-delay-after-add: 5m
+  scale-down-delay-after-delete: 0s
+  scale-down-delay-after-failure: 3m
+  scale-down-unneeded-time: 5m
 
 serviceMonitor:
   enabled: true
 
 
 autoscalingGroups:
-  - name: education-eks-kit-worker-group-120220629071406264800000014
+  - name: eks-autoscale-g1-20230627081342492600000014-eec47df5-32a6-3a60-6b66-72c7cdf1c025
     minSize: 1
     maxSize: 20
